@@ -1,0 +1,115 @@
+{
+  "scenarios": [
+    {
+      "id": "street",
+      "mode": "C1",
+      "result": "pass"
+    },
+    {
+      "id": "running",
+      "mode": "C1",
+      "result": "pass"
+    },
+    {
+      "id": "night-people",
+      "mode": "C1",
+      "result": "pass"
+    },
+    {
+      "id": "panning",
+      "mode": "C1",
+      "result": "pass"
+    },
+    {
+      "id": "stage-talk",
+      "mode": "C2",
+      "result": "pass"
+    },
+    {
+      "id": "stage-dance",
+      "mode": "C2",
+      "result": "pass"
+    },
+    {
+      "id": "stage-block",
+      "mode": "C2",
+      "result": "pass"
+    },
+    {
+      "id": "landscape",
+      "mode": "C3",
+      "result": "pass"
+    },
+    {
+      "id": "night-handheld",
+      "mode": "C3",
+      "result": "pass"
+    },
+    {
+      "id": "tower-tripod",
+      "mode": "C3",
+      "result": "pass"
+    },
+    {
+      "id": "starburst",
+      "mode": "C3",
+      "result": "pass"
+    },
+    {
+      "id": "trails",
+      "mode": "C3",
+      "result": "pass"
+    },
+    {
+      "id": "telephoto",
+      "mode": "C3",
+      "result": "pass"
+    },
+    {
+      "id": "closeup",
+      "mode": "C3",
+      "result": "pass"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 320,
+      "maxOverflow": 0,
+      "scenarios": 14,
+      "result": "pass"
+    },
+    {
+      "width": 360,
+      "maxOverflow": 0,
+      "scenarios": 14,
+      "result": "pass"
+    },
+    {
+      "width": 390,
+      "maxOverflow": 0,
+      "scenarios": 14,
+      "result": "pass"
+    },
+    {
+      "width": 768,
+      "maxOverflow": 0,
+      "scenarios": 14,
+      "result": "pass"
+    },
+    {
+      "width": 1280,
+      "maxOverflow": 0,
+      "scenarios": 14,
+      "result": "pass"
+    }
+  ],
+  "checks": [
+    "14 dropdown mappings, six quick buttons, reset, keyboard selection and clipboard pass",
+    "Print opens and restores 22 local details",
+    "Clipboard rejection shows selectable fallback and clears when scene changes",
+    "JavaScript disabled: 14 semantic scenarios and native details remain readable",
+    "Embedded fragment leaves host body, title, paragraph and button styling unchanged"
+  ],
+  "errors": [],
+  "result": "pass"
+}
