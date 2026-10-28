@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小小錢幣探險家 💰🌍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* 自訂字體與背景 */
+        body {
+            font-family: 'Mali', 'Noto Sans TC', sans-serif;
+            background-color: #fef9e7; /* 溫暖的奶油黃背景 */
+            background-image: radial-gradient(#fde047 1px, transparent 1px);
+            background-size: 40px 40px; /* 可愛的小圓點背景 */
+            color: #334155;
+        }
+
+        /* 手繪風不規則邊框 (核心視覺) */
+        .sketch-box {
+            border: 4px solid #334155;
+            /* 創造不規則、像手繪一樣的圓角 */
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+            box-shadow: 6px 6px 0px #334155;
+            transition: all 0.3s ease;
+        }
+
+        .sketch-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 11px 0px #334155;
+        }
+
+        /* 粉彩主題色 */
+        .theme-pink { background-color: #fce7f3; }
+        .theme-blue { background-color: #e0f2fe; }
+        .theme-green { background-color: #dcfce7; }
+        .theme-white { background-color: #ffffff; }
+
+        /* 手繪風按鈕 */
+        .sketch-btn {
+            border: 3px solid #334155;
+            border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+            box-shadow: 4px 4px 0px #334155;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .sketch-btn:hover {
+            background-color: #fde047;
+            transform: scale(1.05);
+        }
+
+        .sketch-btn:active {
+            box-shadow: 0px 0px 0px #334155;
+            transform: translate(4px, 4px);
+        }
+
+        /* 隱藏預設的 input 上下箭頭 */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="min-h-screen py-10 px-4 sm:px-8">
+
+    <!-- 標題區塊 -->
+    <header class="max-w-3xl mx-auto text-center mb-12">
+        <div class="sketch-box theme-white inline-block px-8 py-4 bg-white mb-6">
+            <h1 class="text-3xl md:text-5xl font-black tracking-wide text-slate-800">
+                💰 小小錢幣探險家 🌍
+            </h1>
+        </div>
+        <p class="text-xl font-bold text-slate-700 bg-yellow-200 inline-block px-4 py-1 rounded-full transform -rotate-2">
+            一起來解開金錢的魔法秘密吧！✨
+        </p>
+    </header>
+
+    <!-- 主要內容區 -->
+    <main class="max-w-3xl mx-auto space-y-10">
+
+        <!-- 單元 1：什麼是貨幣？ -->
+        <section class="sketch-box theme-pink p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 flex items-center">
+                <span class="text-4xl mr-3">🐚</span> 1. 什麼是「貨幣」？
+            </h2>
+            <div class="space-y-4 text-lg font-medium leading-relaxed">
+                <p>
+                    很久很久以前，如果你有一顆蘋果🍎，但你想吃魚🐟，你必須找到一個「有魚但想吃蘋果」的人來交換，超級麻煩對吧！
+                </p>
+                <div class="bg-white/60 p-4 rounded-xl border-2 border-dashed border-pink-300">
+                    <p>👉 於是，聰明的人類發明了<strong>「貨幣 (Money)」</strong>！</p>
+                    <p class="text-sm mt-2 text-slate-600">
+                        一開始是用漂亮的貝殼🐚，後來變成閃亮亮的金幣🪙，到現在我們有了紙鈔💵和神奇的悠遊卡💳！有了貨幣，我們就可以輕鬆買到喜歡的玩具和零食囉！
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 單元 2：幣值的大小秘密 -->
+        <section class="sketch-box theme-blue p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 flex items-center">
+                <span class="text-4xl mr-3">🍕</span> 2. 數字越大越有錢嗎？(幣值)
+            </h2>
+            <div class="space-y-4 text-lg font-medium leading-relaxed">
+                <p>
+                    如果在數學課，1000 當然比 100 大！但是，在不同國家的金錢世界裡，這可不一定喔！😲
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded-2xl border-2 border-blue-200 flex items-center">
+                        <span class="text-3xl mr-2">🇹🇼</span> 
+                        <div>100元 <strong>台幣</strong> <br><span class="text-sm text-slate-500">可以買一個大雞排便當🍱</span></div>
+                    </div>
+                    <div class="bg-white p-4 rounded-2xl border-2 border-blue-200 flex items-center">
+                        <span class="text-3xl mr-2">🇯🇵</span> 
+                        <div>100元 <strong>日幣</strong> <br><span class="text-sm text-slate-500">只能買一瓶小鋁箔包飲料🧃</span></div>
+                    </div>
+                </div>
+                <p class="mt-4 p-4 bg-blue-100 rounded-xl">
+                    <strong>💡 披薩魔法理論：</strong><br>
+                    這就像切披薩！台灣把披薩切成了 10 塊，而有些國家在很久以前因為一些歷史原因（例如東西變得太貴），把披薩切成了 1000 塊。雖然切得很多塊（數字很大），但整塊披薩的大小其實沒有變大喔！這就是不同國家的<strong>「幣值」</strong>。
+                </p>
+            </div>
+        </section>
+
+        <!-- 單元 3：匯率大冒險 -->
+        <section class="sketch-box theme-green p-6 md:p-8 relative overflow-hidden">
+            <!-- 裝飾用小圖示 -->
+            <div class="absolute top-4 right-4 text-5xl opacity-50">✈️</div>
+
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 flex items-center">
+                <span class="text-4xl mr-3">💱</span> 3. 魔法交換機 (匯率)
+            </h2>
+            <p class="text-lg font-medium mb-6">
+                如果你要去日本玩，台灣的錢老闆是不收的喔！我們需要用<strong>「匯率」</strong>這個魔法咒語，把台幣換成日幣！
+            </p>
+
+            <!-- 匯率計算機 -->
+            <div class="bg-white p-6 rounded-2xl border-4 border-slate-700 shadow-[4px_4px_0px_#334155] max-w-md mx-auto text-center">
+                <h3 class="text-xl font-bold mb-2 text-green-700">🍡 買糰子扭蛋計算機 🍣</h3>
+                <p class="text-sm text-slate-500 mb-6">今日魔法匯率：1 元台幣 = 大約 4.5 元日幣</p>
+                
+                <div class="flex flex-col items-center justify-center space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-2xl">🇹🇼</span>
+                        <input type="number" id="twd-input" placeholder="輸入台幣" class="w-32 px-3 py-2 text-center text-xl font-bold border-b-4 border-slate-700 focus:outline-none focus:border-green-500 bg-gray-50 rounded-t-md" min="1">
+                        <span class="font-bold text-lg">元</span>
+                    </div>
+
+                    <div class="text-2xl text-slate-400">👇</div>
+
+                    <button onclick="calculateExchange()" class="sketch-btn bg-green-400 text-slate-800 font-bold text-xl px-8 py-3 w-full max-w-[200px]">
+                        變身！✨
+                    </button>
+                </div>
+
+                <!-- 結果顯示區 -->
+                <div id="result-box" class="mt-6 p-4 bg-yellow-100 rounded-xl hidden border-2 border-dashed border-yellow-400 transform transition-all duration-300">
+                    <p class="text-lg font-bold text-slate-700">哇！變成了</p>
+                    <p class="text-4xl font-black text-red-500 my-2" id="jpy-result">0</p>
+                    <p class="text-lg font-bold text-slate-700">元日幣！🇯🇵</p>
+                    <p class="text-sm mt-2 text-slate-600" id="fun-fact">可以去日本轉扭蛋囉！</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-12 text-center pb-8">
+        <p class="text-slate-500 font-bold">🌟 你已經成為一星錢幣探險家了！🌟</p>
+    </footer>
+
+    <script>
+        // 匯率計算機邏輯
+        function calculateExchange() {
+            const twdInput = document.getElementById('twd-input').value;
+            const resultBox = document.getElementById('result-box');
+            const jpyResult = document.getElementById('jpy-result');
+            const funFact = document.getElementById('fun-fact');
+
+            // 檢查是否輸入有效數字
+            if (!twdInput || twdInput <= 0) {
+                // 如果沒有輸入，讓輸入框震動提示 (簡單的動畫效果)
+                const inputEl = document.getElementById('twd-input');
+                inputEl.style.transform = "translateX(-10px)";
+                setTimeout(() => inputEl.style.transform = "translateX(10px)", 100);
+                setTimeout(() => inputEl.style.transform = "translateX(-10px)", 200);
+                setTimeout(() => inputEl.style.transform = "translateX(0)", 300);
+                return;
+            }
+
+            // 假設匯率為 4.5 (適合小學生的簡單數字)
+            const exchangeRate = 4.5;
+            const calculatedJpy = Math.floor(twdInput * exchangeRate); // 無條件捨去小數點
+
+            // 更新數字
+            jpyResult.innerText = calculatedJpy.toLocaleString(); // 加上千分位逗號
+
+            // 根據金額給予不同的小提示，增加趣味性
+            if (calculatedJpy < 300) {
+                funFact.innerText = "剛好可以買一根好吃的日本冰棒！🍦";
+            } else if (calculatedJpy < 1000) {
+                funFact.innerText = "可以去日本轉一顆酷炫扭蛋囉！🎁";
+            } else if (calculatedJpy < 5000) {
+                funFact.innerText = "哇！可以吃一碗超豐盛的拉麵加煎餃！🍜";
+            } else {
+                funFact.innerText = "太厲害了！你可以在日本買好多伴手禮！🛍️";
+            }
+
+            // 顯示結果區塊 (移除 hidden class 並加上動畫)
+            resultBox.classList.remove('hidden');
+            resultBox.classList.add('scale-105');
+            setTimeout(() => {
+                resultBox.classList.remove('scale-105');
+            }, 200);
+        }
+    </script>
+</body>
+</html>
